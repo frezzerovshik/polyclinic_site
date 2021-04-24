@@ -16,7 +16,7 @@
         if ($_POST["auth_type"] === "Регистрация") 
         {
             fwrite($handle,"Polyclinics.Log: Auth type: Регистрация\n");
-            include("registration.php");
+            include("registration.html");
             return;
         } 
         else 
