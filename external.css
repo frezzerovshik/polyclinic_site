@@ -43,3 +43,7 @@ form.auth {
 form.gallery {
     padding-left: 28%;
 }
+
+th.form {
+    text-align: left;
+}
