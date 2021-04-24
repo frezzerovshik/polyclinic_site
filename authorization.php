@@ -8,6 +8,8 @@
     <?php
         require_once 'connect_db.php';
         $handle = fopen("Logs.txt" , "w+");
+        $login = "";
+        $pwd = "";
         if ($handle == false)
         {
             echo "Не удалось создать или открыть файл журналирования </br>";
@@ -37,6 +39,7 @@
                         {
                             fwrite($handle, "Polyclinic.Log Column Name: " . $column . " Value: " . $value ."\n");
                             $login_checked = $value === $_POST["login"];
+                            $login = $value;
                             fwrite($handle, "Polyclinic.Log is login checked: " . $login_checked . "\n");
                         } 
                         else
@@ -45,12 +48,17 @@
                             {
                                 fwrite($handle, "Polyclinic.Log Column Name: " . $column . " Value: " . $value ."\n");
                                 $password_checked = $value === $_POST["password"];
+                                $password = $login;
                                 fwrite($handle, "Polyclinic.Log is password checked: " . $password_checked ."\n");
                             } 
                         }
                         if ($login_checked == true && $password_checked == true)
                         {
                             fwrite($handle, "Polyclinic.Log admin includes\n");
+                            session_start();
+                            $_SESSION['id'] = $key;
+                            $_SESSION['login'] = $login;
+                            $_SESSION['password'] = $pwd;
                             include("admin.php");
                             return;
                         }
