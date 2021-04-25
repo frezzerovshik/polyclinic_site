@@ -42,5 +42,8 @@
                 </td>
             </tr>
         </table>
+        <?php
+        require 'footer.php';
+        ?>
     </body>
 </html>
