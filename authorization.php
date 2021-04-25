@@ -48,7 +48,7 @@
                             {
                                 fwrite($handle, "Polyclinic.Log Column Name: " . $column . " Value: " . $value ."\n");
                                 $password_checked = $value === $_POST["password"];
-                                $password = $login;
+                                $pwd = $login;
                                 fwrite($handle, "Polyclinic.Log is password checked: " . $password_checked ."\n");
                             } 
                         }
@@ -95,6 +95,10 @@
                         if (($login_checked == true) and ($password_checked == true))
                         {
                             fwrite($handle, "Polyclinic.Log employee includes\n");
+                            session_start();
+                            $_SESSION['id'] = $key;
+                            $_SESSION['login'] = $login;
+                            $_SESSION['password'] = $pwd;
                             include("employee.html");
                             return;
                         }
