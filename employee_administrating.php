@@ -12,7 +12,7 @@ switch ($patient) {
         include_once("employeelist.php");
         break;
     case 'addemployee':
-        include_once("addemployee.php");
+        include_once("addemployee.html");
         break;
     case 'changeemployee':
         include_once("changeemployee.php");
