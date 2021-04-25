@@ -59,7 +59,7 @@
                             $_SESSION['id'] = $key;
                             $_SESSION['login'] = $login;
                             $_SESSION['password'] = $pwd;
-                            include("admin.php");
+                            include("admin.html");
                             return;
                         }
                     }
@@ -95,7 +95,7 @@
                         if (($login_checked == true) and ($password_checked == true))
                         {
                             fwrite($handle, "Polyclinic.Log employee includes\n");
-                            include("employee.php");
+                            include("employee.html");
                             return;
                         }
                     }
