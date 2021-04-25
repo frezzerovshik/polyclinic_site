@@ -7,6 +7,7 @@
     </head>
     <body>
         <?php
+            require 'header.html';
             include_once("connect_db.php");
             $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Ошибка " . mysqli_error($conn));
             $sql = "SELECT `ФИО пациента`,`Номер телефона`,`Дата рождения`,`Дата последнего обращения`,`Назначения`,`Диагноз` FROM `Пациенты` WHERE datediff(CURRENT_DATE, `Дата рождения`)>=45";

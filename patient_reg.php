@@ -5,6 +5,9 @@
         <title>Регистрация пациента</title>
     </head>
     <body>
+        <?php 
+            require 'header.html';
+        ?>
         <form action="patient_reg_bl.php" method="POST">
             <table align="center">
                 <tr>

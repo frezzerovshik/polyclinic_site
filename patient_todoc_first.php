@@ -5,6 +5,9 @@
 <meta charset="utf-8"> </head>
 <link href="external.css" rel="stylesheet">
 <body>
+        <?php 
+            require 'header.html';
+        ?>
     <form action="patient_todoc_second.php" method="POST">
         <? 
             session_start();

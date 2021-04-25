@@ -7,6 +7,7 @@
 </head>
 <body> 
     <?php
+        require 'header.html';
         $name = $_POST["name"];
         $phone = $_POST["phonenumber"]; 
         include_once("connect_db.php");

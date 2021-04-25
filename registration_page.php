@@ -5,6 +5,9 @@
     <link href="external.css" rel="stylesheet">
 </head>
 <body>
+        <?php 
+            require 'header.html';
+        ?>
     <h1>Регистрация</h1>
     <table align="center">
         <tr>

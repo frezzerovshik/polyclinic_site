@@ -6,7 +6,9 @@
         <link href="external.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Добро пожаловать в административную панель Поликлиники</h1>
+        <?php 
+            require 'header.html';
+        ?>
         <table>
             <tr>
                 <td>

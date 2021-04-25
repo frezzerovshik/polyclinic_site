@@ -6,6 +6,9 @@
         <link href="external.css" rel="stylesheet">
     </head>
     <body>
+        <?php 
+            require 'header.html';
+        ?>
         <table align="center">
             <tr>
                 <td width="33%">

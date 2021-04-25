@@ -6,7 +6,7 @@ if (strlen($patient)==0)
 }
 switch ($patient) {
     case 'reg':
-        include_once("patient_reg.html");
+        include_once("patient_reg.php");
         break;
     case 'patientslist':
         include_once("patient_list.php");

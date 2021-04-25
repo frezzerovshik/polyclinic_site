@@ -6,6 +6,7 @@
 </head>
 <body>
     <?php
+        require 'header.html';
         require_once 'connect_db.php';
         $handle = fopen("Logs.txt" , "w+");
         $login = "";
@@ -59,7 +60,7 @@
                             $_SESSION['id'] = $key;
                             $_SESSION['login'] = $login;
                             $_SESSION['password'] = $pwd;
-                            include("admin.html");
+                            include("admin_page.html");
                             return;
                         }
                     }

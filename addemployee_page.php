@@ -6,6 +6,9 @@
         <link href="external.css" rel="stylesheet">
     </head>
     <body>
+        <?php 
+            require 'header.html';
+        ?>
         <form action="addemployee.php" method="POST">
             <table align="center">
                 <tr>

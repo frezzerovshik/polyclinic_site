@@ -4,6 +4,9 @@
 <meta charset="utf-8"> </head>
 Листинг 4 – главное меню сотрудника
 <body>
+        <?php 
+            require 'header.html';
+        ?>
 <h1 align="center">Добро пожаловать в информационную систему поликлиники</h1> <form form enctype="multipart/form-data" action="polyclinics.php" method="POST">
 <p align="center">
 <button type="submit" name="button" value="eldery">Просмотреть информацию о пациентах, находящихся в зоне риска COVID-19</button>

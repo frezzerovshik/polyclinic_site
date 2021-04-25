@@ -8,6 +8,7 @@
         <tr>
         <td>
             <?php
+            require 'header.html';
             include_once("connect_db.php");
             $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Ошибка " . mysqli_error($conn));
             if (strlen($_POST["filter_sex"]) == 0)

@@ -10,13 +10,13 @@ if ($conn->query($sql))
 {
     echo "Добавление прошло успешно</br>";
     sleep(10);
-    include("admin.php");
+    include("admin_page.php");
 }
 else
 {
     echo "Произошла ошибка";
     sleep(10);
-    include("admin.php");
+    include("admin_page.php");
 }
 
 ?>
