@@ -5,16 +5,16 @@ if (strlen($patient)==0)
     die("Ошибка при передаче данных");
 }
 switch ($patient) {
-    case 'reg':
+    case 'removeemployee':
         include_once("removeemployee.html");
         break;
-    case 'patientslist':
+    case 'employeelist':
         include_once("employeelist.php");
         break;
-    case 'todoc':
+    case 'addemployee':
         include_once("addemployee.php");
         break;
-    case 'covid':
+    case 'changeemployee':
         include_once("changeemployee.php");
         break;
     default:

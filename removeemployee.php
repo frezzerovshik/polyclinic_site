@@ -17,6 +17,8 @@
         if ($conn->query($sql)) 
         {
             echo $name . " удален из базы данных работников поликлиники";
+            sleep(10);
+            include("admin.html");
         } 
         else 
         {
