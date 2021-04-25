@@ -33,11 +33,6 @@ img.host {
     height: 22%;
     padding-left: 35%;
 }
-img.userpick {
-    width: 20%;
-    height: 22%;
-    padding-left: 35%;
-}
 p.host {
     padding-left: 25%;
 }
@@ -47,8 +42,4 @@ form.auth {
 }
 form.gallery {
     padding-left: 28%;
-}
-
-th.form {
-    text-align: left;
 }

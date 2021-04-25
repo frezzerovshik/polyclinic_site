@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Регистрация пациента</title>
+    </head>
+    <body>
+        <form action="patient_reg_bl.php" method="POST">
+            <table align="center">
+                <tr>
+                    <td>
+                        <p>Введите ФИО пациента: </p>
+                    </td>
+                    <td>
+                        <p><input type="text" name="fio"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Введите номер телефона пациента: </p>
+                    </td>
+                    <td>
+                        <p><input type="tel" name="phonenumber"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Введите дату рождения пациента: </p>
+                    </td>
+                    <td>
+                        <p><input type="datetime" name="birthdate"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p><input type="submit" name="reg">Зарегистрировать пациента</p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <?php 
+            $fio = $_POST["fio"];
+            $phonenumber = $_POST["phonenumber"];
+            $birthdate = $_POST["birthdate"];
+            require_once 'connect_db.php';
+            $conn = mysqli_connect($servername, $username, $password, $dbname) or die("Ошибка " . mysqli_error($conn)); 
+            if (strlen($fio)==0)
+            {
+                die("Поле \"ФИО\" не может быть пустым");
+            }
+            $sql = "INSERT IGNORE INTO Пациенты(`ФИО пациента`,`Номер телефона`,`Дата рождения`) VALUES('" .$fio."','" .$phonenumber."','".$birthdate."');";
+            if($conn->query($sql))
+            {
+                echo "Регистрация пациента прошла успешно</br>";
+                sleep(3);
+                include_once("admin.html");
+            }
+            else
+            {
+                echo "Возникла ошибка при регистрации</br>";
+                sleep(3);
+                include_once("patient_reg.php");
+            }
+        ?>
+    </body>
+</html>
