@@ -14,9 +14,6 @@ switch ($patient) {
     case 'addemployee':
         include_once("addemployee.html");
         break;
-    case 'changeemployee':
-        include_once("changeemployee.php");
-        break;
     default:
         echo "Неизвестная ошибка</br>";
         break;
